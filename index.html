@@ -1,122 +1,41 @@
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-    <title>My Portfolio</title>
-    <style>
-      body {
-        margin: 20px;
-      }
-      h1 {
-        text-align: center;
-      }
-
-      nav li {
-        list-style-type: none;
-      }
-
-      nav ul li a {
-        float: right;
-        text-align: right;
-        text-decoration: none;
-        margin: 20px;
-        padding: 5px;
-      }
-      main {
-        margin-top: 100px;
-      }
-      .about-content {
-        display: flex;
-      }
-      .about-description {
-        margin-left: 10px;
-      }
-      .profile-img {
-        width: 400px;
-        height: 400px;
-      }
-      .contact-us-content {
-        display: flex;
-        width: 100%;
-        border: 1px dotted;
-      }
-      .contact-us-info {
-        width: 50%;
-        margin-left: 10px;
-        padding: 50px;
-      }
-      .contact-us-form {
-        width: 50%;
-        /* border: 1px dotted; */
-        margin-left: 10px;
-      }
-      .contact-us-form form {
-        margin-left: 30px;
-        margin-right: 30px;
-        padding: 20px;
-      }
-      h2 {
-        border-bottom: 1px solid black;
-        width: fit-content;
-      }
-      .social-media {
-        margin-top: 20px;
-      }
-      .social-media a {
-        border: 1px solid black;
-        width: 30px;
-        height: 30px;
-        padding: 8px;
-        text-decoration: none;
-        color: black;
-      }
-      button {
-        padding: 15px;
-        float: right;
-      }
-      label {
-        display: inline-block;
-        width: 100px;
-      }
-      .privacy-check-label {
-        width: 300px;
-        margin-left: 5px;
-      }
-      legend {
-        margin-bottom: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- header including navigation -->
-    <header>
-      <h1>Welcome to My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <header class="main-header">
+      <div class="header-title">
+        <h1>Welcome to My Portfolio</h1>
+      </div>
+      <div class="header-nav">
+        <nav>
+          <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <!-- main section -->
     <main>
       <!-- about section -->
       <section id="about" class="about-section">
         <article>
-          <header>
-            <h2>About Me</h2>
+          <header class="about-header">
+            <h2>ABOUT</h2>
           </header>
           <div class="about-content">
             <div class="about-image">
               <img
-                src="./images/profile-photo-web-small.jpg"
+                src="./images/myprof.png"
                 alt="Portrait of Anchumol BP"
                 class="profile-img"
               />
@@ -161,102 +80,135 @@
       <!-- projects section -->
       <section id="projects" class="projects-section">
         <header>
-          <h2>Projects</h2>
+          <h2>PROJECTS</h2>
         </header>
-        <table class="projects-table">
-          <thead>
-            <tr>
-              <th>Project</th>
-              <th>Technologies</th>
-              <th>Description</th>
-              <th>Key Features</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Real Estate MLS &amp; Property Management Platform</td>
-              <td>Laravel, MySQL, React.js, REST APIs, AWS S3</td>
-              <td>
+
+        <div class="projects-container">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Real Estate MLS & Property Management Platform</h3>
+                <span>Laravel • MySQL • React.js • REST APIs • AWS S3</span>
+              </div>
+
+              <p class="project-description">
                 Developed a large-scale real estate platform that manages
                 property listings, agent profiles, neighborhood information,
-                wishlists, and property visit tracking. Implemented MLS data
-                integration, advanced property search and filtering, user
-                authentication, media management, and analytics for property
-                views and user engagement. Built APIs and administrative tools
-                to support property management and reporting.
-              </td>
-              <td>
-                <ul>
-                  <li>MLS property listing management</li>
-                  <li>Advanced search and filtering</li>
-                  <li>Agent and neighborhood modules</li>
-                  <li>Wishlist functionality</li>
-                  <li>Property visit tracking and analytics</li>
-                  <li>Image and document management using cloud storage</li>
-                </ul>
-              </td>
-            </tr>
+                wishlists, and property visit tracking. Implemented MLS
+                integration, advanced search, media management, and analytics.
+              </p>
 
-            <tr>
-              <td>Real Estate Admin Dashboard</td>
-              <td>React.js, Node.js, Express.js, MongoDB, Multer</td>
-              <td>
+              <h4>Key Features</h4>
+              <ul>
+                <li>MLS property listing management</li>
+                <li>Advanced search and filtering</li>
+                <li>Agent and neighborhood modules</li>
+                <li>Wishlist functionality</li>
+                <li>Property visit tracking and analytics</li>
+                <li>Cloud-based image and document management</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img
+                src="./images/ashuhomes.png"
+                alt="Portrait of Anchumol BP"
+                class="profile-img"
+              />
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img
+                src="./images/realtipro.png"
+                alt="Portrait of Anchumol BP"
+                class="profile-img"
+              />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Real Estate Admin Dashboard</h3>
+                <span>React.js • Node.js • Express.js • MongoDB • Multer</span>
+              </div>
+
+              <p class="project-description">
                 Built a responsive administrative dashboard for managing website
-                content, pages, media assets, and business data. Developed CRUD
-                operations, authentication, file uploads, and dynamic content
-                management features. Designed a modular architecture to simplify
-                future expansion and maintenance.
-              </td>
-              <td>
-                <ul>
-                  <li>Secure admin authentication</li>
-                  <li>Content and page management</li>
-                  <li>Banner and image gallery uploads</li>
-                  <li>Dashboard reporting and management tools</li>
-                  <li>REST API integration</li>
-                  <li>Responsive user interface</li>
-                </ul>
-              </td>
-            </tr>
+                content, media assets, and business data with secure
+                authentication and CRUD operations.
+              </p>
 
-            <tr>
-              <td>Loan &amp; EMI Calculator Application</td>
-              <td>Laravel, JavaScript, MySQL</td>
-              <td>
-                Developed a loan application and EMI calculation system that
-                allows users to estimate monthly payments based on loan amount,
-                interest rate, and tenure. Implemented interactive sliders,
-                real-time calculations, and storage of loan application data for
-                further processing and analysis.
-              </td>
-              <td>
-                <ul>
-                  <li>Dynamic EMI calculations</li>
-                  <li>Interactive loan amount sliders</li>
-                  <li>Interest and tenure selection</li>
-                  <li>Loan application submission</li>
-                  <li>Data storage and reporting</li>
-                  <li>User-friendly financial planning interface</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              <h4>Key Features</h4>
+              <ul>
+                <li>Secure admin authentication</li>
+                <li>Content and page management</li>
+                <li>Banner and gallery uploads</li>
+                <li>Dashboard reporting tools</li>
+                <li>REST API integration</li>
+                <li>Responsive interface</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-content">
+              <div class="project-header">
+                <h3>Loan & EMI Calculator Application</h3>
+                <span>Laravel • JavaScript • MySQL</span>
+              </div>
+
+              <p class="project-description">
+                Developed a loan application and EMI calculation system with
+                real-time calculations and loan application tracking.
+              </p>
+
+              <h4>Key Features</h4>
+              <ul>
+                <li>Dynamic EMI calculations</li>
+                <li>Interactive sliders</li>
+                <li>Interest and tenure selection</li>
+                <li>Loan application submission</li>
+                <li>Data storage and reporting</li>
+                <li>User-friendly financial planning</li>
+              </ul>
+            </div>
+            <div class="project-image">
+              <img
+                src="./images/eform.png"
+                alt="Portrait of Anchumol BP"
+                class="profile-img"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- contact section -->
       <section id="contact" class="contact-us-section">
         <article>
-          <header><h2>Contact Us</h2></header>
+          <header><h2>CONTACT US</h2></header>
           <div class="contact-us-content">
             <div class="contact-us-info">
               <p>
-                If you have any questions or inquiries, feel free to reach out
-                to us!
+                Thank you for visiting my portfolio. If you would like to
+                discuss a project, explore collaboration opportunities, or have
+                any questions, feel free to get in touch. I am always open to
+                connecting with professionals, recruiters, and clients.
               </p>
-              <div>Email: anchumolbp97@gmail.com</div>
-              <div>Phone: +1 (555) 123-4567</div>
-              <div>Location: Kottayam, Mundakkayam</div>
+
+              <div><strong>Email:</strong> anchumolbp97@gmail.com</div>
+              <div><strong>Phone:</strong> +91 XXXXX XXXXX</div>
+              <div>
+                <strong>Location:</strong> Mundakkayam, Kottayam, Kerala, India
+              </div>
+
+              <p>
+                I typically respond to inquiries within 24–48 hours. I look
+                forward to hearing from you.
+              </p>
+
               <div class="social-media">
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-linkedin"></a>
@@ -265,46 +217,38 @@
             </div>
             <div class="contact-us-form">
               <form action="">
-                <fieldset>
-                  <legend>Get In Touch With</legend>
-                  <label for="name">Name:</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                  /><br /><br />
-                  <label for="email">Email:</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                  /><br /><br />
-                  <label for="subject">Subject:</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                  /><br /><br />
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" required></textarea
-                  ><br /><br />
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required /><br /><br />
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                /><br /><br />
+                <label for="subject">Subject:</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                /><br /><br />
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea
+                ><br /><br />
 
-                  <input
-                    type="checkbox"
-                    id="privacy-check-box"
-                    name="privacy-check"
-                    required
-                  /><label for="privacy-check-box" class="privacy-check-label"
-                    >I agree to the
-                    <span
-                      ><a href="#" target="_blank">privacy policy</a></span
-                    ></label
-                  ><br /><br />
-                  <button type="submit">SEND MESSAGE</button>
-                </fieldset>
+                <input
+                  type="checkbox"
+                  id="privacy-check-box"
+                  name="privacy-check"
+                  required
+                /><label for="privacy-check-box" class="privacy-check-label"
+                  >I agree to the
+                  <span
+                    ><a href="#" target="_blank">privacy policy</a></span
+                  ></label
+                ><br /><br />
+                <button type="submit" class="submit">SEND MESSAGE</button>
               </form>
             </div>
           </div>
